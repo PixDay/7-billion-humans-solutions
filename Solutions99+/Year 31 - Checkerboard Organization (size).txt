@@ -1,13 +1,8 @@
+mem1 = nearest printer
 a:
-if nw == printer or
- ne == printer or
- sw == printer or
- s == printer or
- se == printer and
- myitem == nothing:
-	takefrom nw,sw,s,ne,se
-	step w,e
+if myitem != datacube:
+	takefrom mem1
+	step w, n, e
 endif
 step nw,sw,ne,se
-drop
 jump a
